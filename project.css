@@ -1,0 +1,1111 @@
+    * {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    body {
+        scroll-behavior: smooth;
+    }
+    
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        /* left: 0; */
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://d2cdo4blch85n8.cloudfront.net/wp-content/uploads/2021/08/Choosing-Between-BMW-vs-Audi-vs-Mercedes-Featured-image-1568x882.jpg);
+        /* background-image:linear-gradient(to left , rgba(0,0,0,0.3),rgba(0,0,0,0.7)), url(https://car-images.bauersecure.com/pagefiles/84515/1040x0/049-3-series.jpg?scale=down); */
+        background-size: cover;
+        background-position: center;
+        transition: 1s;
+        z-index: 1;
+    }
+    
+    .background button {
+        position: relative;
+        top: 30%;
+        left: 46%;
+        background-color: transparent;
+        font-size: 30px;
+        border: 2px solid white;
+        background-color: rgba(255, 255, 255, 0.24);
+        color: rgb(255, 255, 255);
+        border-radius: 9px;
+        cursor: pointer;
+        transition: 2s;
+        box-shadow: rgba(0, 132, 255, 0.568) 0px 0px 15px;
+    }
+    
+    .background button span {
+        position: relative;
+    }
+    
+    .background button::before {
+        content: '';
+        position: absolute;
+        transition: 1s;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background-color: white;
+    }
+    
+    .background button:hover::before {
+        width: 100%;
+        height: 100%;
+        /* transform: translateY(-15px);     */
+    }
+    
+    .background button:hover {
+        color: black;
+    }
+    
+    .ust {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        color: white;
+        padding: 10px 100px;
+        transition: 1s;
+        z-index: 100;
+    }
+    
+    .menu {
+        display: none;
+    }
+    
+    .ust.black {
+        background-color: rgb(17, 17, 17);
+        color: white;
+    }
+    
+    .ust.active {
+        color: black;
+    }
+    
+    .ust.black div:first-child img {
+        transition: 1s;
+    }
+    
+    .ust.black div:first-child:hover img {
+        transform: rotateY(-180deg);
+    }
+    
+    .bmwlogo {
+        width: 4%;
+    }
+    
+    .bmwlogo img {
+        width: 100%;
+    }
+    
+    .mercedeslogo {
+        width: 5%;
+        height: 50px;
+    }
+    
+    .mercedeslogo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .audilogo {
+        width: 8%;
+        height: 50px;
+        position: relative;
+        left: -1%;
+    }
+    
+    .audilogo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .ust a {
+        text-decoration: none;
+        color: white;
+        transition: 1s;
+    }
+    
+    .ust ul {
+        display: flex;
+        list-style: none;
+    }
+    
+    .ust ul li {
+        margin-left: 20px;
+        font-size: 20px;
+        position: relative;
+    }
+    
+    .ust ul li::before {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        bottom: -15%;
+        transition: .5s;
+    }
+    
+    .ust.black ul li::before {
+        background-color: #ffffff;
+    }
+    
+    .ust.sade ul li::before {
+        background-color: rgba(0, 132, 255, 0.568);
+    }
+    
+    .ust ul li:hover::before {
+        width: 100%;
+    }
+    
+    .ust.bmw ul li:hover::before {
+        background-color: rgba(0, 132, 255, 0.568);
+    }
+    
+    .ust.mercedes ul li:hover::before {
+        background-color: #9B5A2F;
+    }
+    
+    #hi {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+    }
+    
+    #hi a {
+        width: 32%;
+        height: 450px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    .sekiller {
+        width: 100%;
+        height: 100%;
+        box-shadow: rgba(248, 248, 248, 0.301) 0px 5px 15px;
+        transition: 2s;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .sekiller div {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .cercive {
+        width: 100%;
+        height: 85%;
+        overflow: hidden;
+    }
+    
+    .bir,
+    .iki,
+    .uc {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        transition: 2s;
+    }
+    
+    .bir {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://images.hdqwalls.com/download/black-box-richter-audi-rs-7-sportback-2020-front-af-1680x1050.jpg);
+    }
+    
+    .iki {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://car-images.bauersecure.com/pagefiles/84515/1040x0/050-3-series.jpg?scale=down);
+        background-position-x: -110px;
+    }
+    
+    .uc {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://c4.wallpaperflare.com/wallpaper/167/354/348/blue-mercedes-benz-mercedes-amg-wallpaper-preview.jpg);
+    }
+    
+    .sekiller:hover {
+        box-shadow: rgb(255, 255, 255) 0px 0px 15px;
+    }
+    
+    .sekiller:hover .cercive div {
+        transform: scale(1.2);
+    }
+    
+    .melumat {
+        width: 100%;
+        height: 18%;
+        padding: 5px 20px 20px 20px;
+        background-color: rgb(17, 17, 17);
+        color: white;
+        position: relative;
+        top: -2%;
+    }
+    
+    .melumat h1 {
+        font-weight: 500;
+    }
+    
+    #hi>p {
+        bottom: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        color: white;
+        display: none;
+    }
+    
+    .hii {
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://www.topgear.com/sites/default/files/cars-car/carousel/2018/12/bmw_330i_m_sport-025.jpg?w=892&h=502);
+        background-size: cover;
+        object-fit: cover;
+    }
+    
+    .hii div {
+        width: 60%;
+        height: 60vh;
+        position: relative;
+        top: 15%;
+        left: 2%;
+    }
+    
+    .hii div>* {
+        position: absolute;
+        bottom: 0;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    
+    .hii h1 {
+        font-size: 60px;
+        color: white;
+        animation-name: animasiya1;
+    }
+    
+    .hii a {
+        animation-name: animasiya2;
+        animation-delay: .1s;
+    }
+    
+    .hii button {
+        font-size: 25px;
+        background-color: #1b5194;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 5px 10px;
+        margin: 30px 0 10px 0;
+        box-shadow: rgba(255, 255, 255, 0.377) 0px 0px 10px;
+        cursor: pointer;
+    }
+    
+    .hii p {
+        font-size: 20px;
+        color: white;
+        animation-name: animasiya3;
+        animation-delay: .2s;
+    }
+    
+    @keyframes animasiya1 {
+        from {
+            bottom: 0;
+        }
+        to {
+            bottom: 80%;
+            opacity: 1;
+        }
+    }
+    
+    @keyframes animasiya2 {
+        from {
+            bottom: 0;
+        }
+        to {
+            bottom: 65%;
+            opacity: 1;
+        }
+    }
+    
+    @keyframes animasiya3 {
+        from {
+            bottom: 0;
+        }
+        to {
+            bottom: 50%;
+            opacity: 1;
+        }
+    }
+    
+    .mercedes.hii button {
+        background-color: #9B5A2F;
+    }
+    
+    .mercedes.hii {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://www.conceptcarz.com/images/Mercedes-Benz/2019-mercedes-c-class_08.jpg);
+    }
+    
+    .audi.hii {
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://www.topgear.com/sites/default/files/cars-car/carousel/2019/09/ttsc7046.jpg?w=892&h=502);
+        background-size: cover;
+    }
+    
+    .reng {
+        width: 100%;
+        padding: 100px 0;
+        background: white;
+        text-align: center;
+    }
+    
+    .rengg {
+        width: 40%;
+        height: 358px;
+        border: 1px solid gray;
+        margin: 30px auto 10px auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .rengg img {
+        width: 100%;
+    }
+    
+    .audi.reng img {
+        width: 130%;
+        object-position: -80px -50px;
+        object-fit: cover;
+    }
+    
+    .reng ul {
+        margin: auto;
+        width: 40%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(255, 255, 255);
+        border: 1px solid gray;
+        padding-right: 50px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    
+    .reng li {
+        width: 36px;
+        height: 30px;
+        background-image: url(https://www.bmwnorwood.com/static/v9/widgets/showroom/default/v2/images/swatch.png);
+        background-size: 46px 46px;
+        background-position-x: 41px;
+        background-position-y: 40px;
+        margin: 10px;
+        cursor: pointer;
+        transition: .3s;
+        border: 1px solid rgb(255, 255, 255);
+    }
+    
+    .bmw.reng li:first-child {
+        background-color: rgb(41, 69, 139);
+    }
+    
+    .bmw.reng li:nth-child(2) {
+        background-color: rgb(70, 22, 29);
+    }
+    
+    .bmw.reng li:nth-child(3) {
+        background-color: rgb(81, 82, 84);
+    }
+    
+    .bmw.reng li:nth-child(4) {
+        background-color: rgb(87, 17, 20);
+    }
+    
+    .bmw.reng li:nth-child(5) {
+        background-color: rgb(202, 202, 202);
+    }
+    
+    .bmw.reng li:nth-child(6) {
+        background-color: rgb(130, 48, 27);
+    }
+    
+    .bmw.reng li:nth-child(7) {
+        background-color: rgb(3, 15, 41);
+    }
+    
+
+
+
+    .mercedes.reng li:first-child {
+        background-color: rgb(124, 129, 133);
+    }
+    
+    .mercedes.reng li:nth-child(2) {
+        background-color: rgb(41, 49, 95);
+    }
+    
+    .mercedes.reng li:nth-child(3) {
+        background-color: rgb(225, 226, 206);
+    }
+    
+    .mercedes.reng li:nth-child(4) {
+        background-color: rgb(201, 36, 36);
+    }
+    
+    .mercedes.reng li:nth-child(5) {
+        background-color: rgb(168, 162, 162);
+    }
+    
+    .mercedes.reng li:nth-child(6) {
+        background-color: rgb(4, 4, 3);
+    }
+    
+    .audi.reng li:first-child {
+        background-color: rgb(57, 61, 62);
+    }
+    
+    .audi.reng li:nth-child(2) {
+        background-color: rgb(179, 38, 46);
+    }
+    
+    .audi.reng li:nth-child(3) {
+        background-color: rgb(119, 115, 115);
+    }
+    
+    .audi.reng li:nth-child(4) {
+        background-color: rgb(14, 22, 37);
+    }
+    
+    .audi.reng li:nth-child(5) {
+        background-color: rgb(165, 162, 162);
+    }
+    
+    .audi.reng li:nth-child(6) {
+        background-color: rgb(8, 8, 8);
+    }
+    
+    .audi.reng li:nth-child(7) {
+        background-color: #1b308f;
+    }
+    
+    .reng li:hover {
+        box-shadow: black 0 0 20px;
+    }
+    
+    .reng h2 {
+        font-size: 25px;
+        font-weight: bold;
+        -webkit-text-stroke: #1b5194 1px;
+    }
+    
+    .mercedes.reng h2 {
+        font-size: 25px;
+        font-weight: bold;
+        -webkit-text-stroke: rgb(201, 36, 36) 1px;
+    }
+    
+    .reng h3 {
+        font-size: 40px;
+        font-weight: 400;
+    }
+    
+    .orta {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.863);
+    }
+    
+    .orta img {
+        transition: 1s;
+        box-shadow: rgba(255, 255, 255, 0.452) 0px 0px 10px;
+    }
+    
+    .orta>div {
+        margin: auto;
+        width: 90%;
+        height: 90vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .orta hr {
+        width: 30%;
+        margin: auto;
+        background-color: rgb(255, 255, 255);
+    }
+    
+    .solsekil {
+        width: 50%;
+        position: relative;
+    }
+    
+    .audi.orta .solsekil::after {
+        background-color: #ffffff;
+    }
+    
+    .audi.orta .sagsekil::before {
+        background-color: #ffffff;
+    }
+    
+    .mercedes.orta .solsekil::after {
+        background-color: #9B5A2F;
+    }
+    
+    .mercedes.orta .sagsekil::before {
+        background-color: #9B5A2F;
+    }
+    
+    .solsekil::after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        margin-top: 20px;
+        width: 7px;
+        height: 100px;
+        background-color: #1B5194;
+    }
+    
+    .solsekil img {
+        width: 100%;
+    }
+    
+    .sagmelumat {
+        width: 40%;
+        color: white;
+    }
+    
+    .sagmelumat h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .sagmelumat p {
+        font-size: 18px;
+    }
+    
+    .sagsekil {
+        width: 50%;
+        position: relative;
+    }
+    
+    .sagsekil::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        left: -1%;
+        margin-top: 20px;
+        width: 7px;
+        height: 100px;
+        background-color: #1B5194;
+    }
+    
+    .sagsekil img {
+        width: 100%;
+    }
+    
+    .solmelumat {
+        width: 40%;
+        color: white;
+        text-align: right;
+    }
+    
+    .solmelumat h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    
+    .solmelumat p {
+        font-size: 18px;
+    }
+    
+    .slidehisse {
+        position: relative;
+        width: 100%;
+        padding: 100px 0;
+        background: black;
+        /* background:linear-gradient(to bottom,rgb(0, 0, 0),rgba(0, 0, 0, 0.863)); */
+    }
+    
+    .slideshow {
+        width: 50%;
+        height: 460px;
+        background-color: red;
+        margin: auto;
+    }
+    
+    .esasslide {
+        height: 80%;
+    }
+    
+    .esasslide img {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .altslide {
+        height: 20%;
+        display: flex;
+    }
+    
+    .altslide img {
+        width: 20%;
+        object-fit: cover;
+    }
+    
+    .slidehisse button {
+        position: absolute;
+        border-radius: 5px;
+        border: none;
+        font-size: 30px;
+        display: none;
+        position: fixed;
+        z-index: 3;
+    }
+    
+    .sol {
+        top: 50%;
+        left: 10%;
+    }
+    
+    .sag {
+        top: 50%;
+        right: 10%;
+    }
+    /* .esashisse{
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 70%;
+    height: 89vh;
+    display: none;
+}
+.esashisse img{
+    width: 100%;
+} */
+    
+    .esashisse {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0%;
+        left: 0%;
+        background-color: rgba(0, 0, 0, 0.815);
+        display: none;
+        z-index: 1;
+    }
+    
+    .esashisse img {
+        width: 60%;
+        height: 75vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -43%);
+    }
+    
+    .bagla {
+        position: fixed;
+        right: 17%;
+        top: 11%;
+        font-size: 30px;
+        padding: 0 7px;
+        display: none;
+        z-index: 3;
+    }
+    
+    .bodi {
+        overflow-y: scroll;
+    }
+    
+    .son {
+        width: 100%;
+        background-color: rgb(17, 17, 17);
+        padding: 10px 0 30px 0;
+        border-bottom: 1px solid gray;
+    }
+    
+    .son ul {
+        color: white;
+        list-style: none;
+    }
+    
+    .son>div {
+        width: 80%;
+        margin: auto;
+    }
+    
+    .ustson {
+        padding: 20px 0 10px 0;
+    }
+    
+    .ustson ul {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 20px;
+    }
+    
+    .ustson li {
+        width: 17%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    
+    .ustson img {
+        width: 10%;
+        margin-left: 5px;
+    }
+    
+    .altson {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .altson div {
+        width: 20%;
+    }
+    
+    footer {
+        background-color: rgb(17, 17, 17);
+        text-align: center;
+        color: white;
+        padding: 10px;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .background {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://w0.peakpx.com/wallpaper/644/303/HD-wallpaper-german-beasts-audi-bmw-car-germany-grey-red-sports-supercar-thumbnail.jpg);
+        }
+        .ust div ul {
+            position: absolute;
+            left: 15%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .ust ul li {
+            font-size: 13px;
+            margin-left: 10px;
+        }
+        .menu {
+            display: inline-block;
+        }
+        .ust.sade {
+            padding: 10px 20px;
+        }
+        .background button {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+            border: 3px solid white;
+            box-shadow: rgba(0, 132, 255, 0.801) 0px 0px 30px;
+        }
+        #hi {
+            height: 70vh;
+        }
+        #hi a {
+            width: 32%;
+            height: 150px;
+        }
+        .sekiller {
+            overflow: visible;
+        }
+        .cercive {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            height: 80%;
+        }
+        .iki {
+            background-position-x: -46px;
+        }
+        .uc {
+            background-position-y: -4px;
+        }
+        .melumat {
+            width: 100%;
+            height: 20%;
+            padding: 0px;
+            background-color: rgb(17, 17, 17);
+            color: white;
+            position: relative;
+            top: -2%;
+        }
+        .melumat h1 {
+            position: absolute;
+            top: -140px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 10px;
+        }
+        .melumat p {
+            font-size: 10px;
+        }
+        #hi>p {
+            bottom: 40%;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            color: white;
+            display: inline-block;
+            border: 1px solid white;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .son>div {
+            width: 90%;
+        }
+        .son>div:last-child {
+            position: relative;
+            left: -10%;
+        }
+        .ustson ul {
+            margin-left: -40px;
+        }
+        .ustson li {
+            width: 25%;
+            justify-content: center;
+        }
+        .ustson img {
+            width: 20%;
+            margin-left: 7px;
+        }
+        footer {
+            font-size: 11px;
+        }
+    }
+    
+    .back {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-color: black;
+        transition: 1s;
+    }
+    
+    .back video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .back button {
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        background-color: transparent;
+        font-size: 30px;
+        border: 2px solid white;
+        color: white;
+        border-radius: 9px;
+    }
+    
+
+    
+    .location {
+        width: 100%;
+        height: 100vh;
+        padding-top: 50px;
+        position: relative;
+        display: flex;
+    }
+    
+    .location iframe {
+        width: 70%;
+        height: 100%;
+    }
+    
+    .divlocation {
+        width: 30%;
+        height: 100%;
+        background-color: white;
+    }
+    
+    .div2location {
+        font-size: 20px;
+        padding: 50px;
+    }
+    
+    .div2location h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    
+    .div2location p {
+        margin-bottom: 10px;
+    }
+    
+    .div2location i {
+        width: 10%;
+        text-align: center;
+        margin-right: 15px;
+        color: rgb(0, 153, 255);
+    }
+    /* .divlocation img{
+    width: 100%;
+    height: 200px;
+}
+.div2location{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+} */
+    
+    .contact1 {
+        width: 100%;
+        height: 100vh;
+        background-image: url(https://c.tenor.com/xY0lr1Ciyt8AAAAd/car.gif);
+        background-size: cover;
+        background-position: left;
+    }
+    
+    .contact2 {
+        margin: auto;
+        padding: 100px;
+        width: 50%;
+        height: 100vh;
+        text-align: right;
+    }
+    
+    .contact2 input::placeholder {
+        color: rgb(0, 0, 0);
+    }
+    
+    .contact2 textarea::placeholder {
+        color: rgb(0, 0, 0);
+    }
+    
+    .contact2 input {
+        width: 100%;
+        height: 50px;
+        font-size: 25px;
+        padding: 10px;
+        border: 1px solid rgb(255, 255, 255);
+        outline: none;
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.493);
+    }
+    
+    .contact2 textarea {
+        width: 100%;
+        height: 150px;
+        font-size: 25px;
+        padding: 10px;
+        border: 1px solid rgb(235, 235, 235);
+        outline: none;
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.493);
+    }
+    
+    .contact2 button {
+        font-size: 20px;
+        padding: 5px 10px;
+        background-color: rgb(0, 102, 255);
+        color: white;
+        border: none;
+        border-radius: 7px;
+    }
+    
+    .gallery {
+        display: flex;
+    }
+    
+    .gallery div {
+        width: 50%;
+        overflow: hidden;
+    }
+    
+    .gallery div img {
+        width: 100%;
+        vertical-align: middle;
+        object-fit: cover;
+    }
+    
+    .gallery div:last-child img:first-child {
+        height: 600px;
+    }
+    
+    .gallery div:first-child img:last-child {
+        height: 600px;
+    }
+    /* .gallery{
+    padding-top: 50px;
+}
+.soldiv{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.soldiv img{
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+}
+.soldiv img:first-child{
+    width: 100%;
+}
+.soldiv img:nth-child(3){
+    width: 50%;
+    height: 400px;
+} */
+    
+    .blog {
+        width: 100%;
+        padding: 100px 60px;
+    }
+    
+    .xeberler {
+        width: 70%;
+        border: 5px solid black;
+    }
+    
+    .kateqoriya {
+        width: 16%;
+        height: 200px;
+        background-color: rgb(0, 255, 76);
+        position: fixed;
+        top: 100px;
+        right: 60px;
+    }
+    
+    .xeberler>div {
+        width: 100%;
+        height: 400px;
+        margin-bottom: 50px;
+    }
+    
+    .xeber1 {
+        background-color: red;
+    }
+    
+    .xeber2 {
+        background-color: rgb(30, 255, 0);
+    }
+    
+    .xeber3 {
+        background-color: rgb(68, 0, 255);
+    }
+    
+    .xeber4 {
+        background-color: rgb(255, 0, 212);
+    }
+    
+    .xeber5 {
+        background-color: rgb(238, 255, 0);
+    }
+    
+    .xeber6 {
+        background-color: rgb(255, 0, 0);
+    }
